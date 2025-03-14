@@ -1,0 +1,13 @@
+<!-- filepath: d:\ongk_devapp\myblog\blog\templates\blog\register.html -->
+{% extends "blog/base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+    <div class="container">
+        <h2>Register</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+{% endblock %}
